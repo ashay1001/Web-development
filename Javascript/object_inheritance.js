@@ -15,6 +15,7 @@ console.log(obj3)
 console.log(obj3.__proto__)
 console.log(obj3.__proto__.__proto__)
 console.log(obj3.__proto__.__proto__.__proto__)
+console.log(obj3.__proto__.__proto__.__proto__.__proto__)  // this will be null
 
 // if we check like "obj3.__proto__ == obj2" then output will be true.
 // similarly --> obj3.__proto__.__proto__ == obj1
