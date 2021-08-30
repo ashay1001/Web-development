@@ -26,10 +26,10 @@ function checkThis() {
 //console.log(obj.10)   this will not work as 10 is not a string
 console.log(obj['10'])  //this will work
 
-obj.d()  // "this" inside d() will point to obj itself as it as called with obj
+console.log(obj.d())  // "this" inside d() will point to obj itself as it as called with obj
 
 let z = obj.d
-z()   // this will point to window. 
+console.log(z())   // this will point to window. 
       //though z and d are same same function z() is called in scope of window 
       //hence "this" from z will return window
 

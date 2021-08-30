@@ -36,8 +36,8 @@ console.log("after push('G') letters: ",letters)
 letters.pop()
 console.log("after pop() letters: ",letters)
 
-console.log(letters.indexOf("e"))
-console.log(letters.indexOf("E"))
+console.log("Index of e: ",letters.indexOf("e"))
+console.log("Index of E: ",letters.indexOf("E"))
 
 console.log("Calling letters.shift()", letters.shift())
 console.log("letters after shift()",letters)
@@ -49,8 +49,8 @@ console.log("letters after unshift('Z')",letters)
 //################## Objects ################
 
 /*
-javascript allows to create objects without creating class
-below shown is one way of creating javascript object
+javascript allows to create objects without creating class.
+given below is one way of creating javascript object.
 it is Javascript object notation (JSON).
 */
 var bird = {
