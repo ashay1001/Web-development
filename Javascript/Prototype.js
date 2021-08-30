@@ -41,30 +41,22 @@ console.log(fun.__proto__ == Function.prototype)
 // typeof Object.create(Boolean.prototype) -> ??
 
 console.log(str.charAt(4))
-console.log(typeof str.charAt) // ? 
+console.log(typeof str.charAt) // function
 let str2 = "dgndgn"
 console.log(str.charAt == str2.charAt) // true
 
-str.charAt = function () { return 'X' } // does not make a difference
+str.charAt = function () { return 'X' } // does not make a difference i.e defination of charAt function does not get changed because of this
 
-String.prototype.charAt = function () { return 'X' }
+String.prototype.charAt = function () { return 'X' } // here we have changed the defination of charAt function from prototype itself hence it is changed now
 console.log(str.charAt(1))
+console.log(String.prototype)
+console.log(Array.prototype)
 
-// String.prototype contains all default string functions
-// like charAt, indexOf, substring, slice etc 
 
-Array.prototype.joinOriginal = Array.prototype.join
+// String.prototype contains all default string functions like charAt, indexOf, substring, slice etc 
 
-Array.prototype.join = function () {
-    console.log('join called on', this)
+Array.prototype.joinOriginal = Array.prototype.join     //joinOriginal(user defined function) is added into Array.prototype and then reference of join copied into joinOriginal
+
+Array.prototype.join = function () {           // here we have modified join function and then called joinOriginal
     return this.joinOriginal(...arguments)
 }
-/**
- * Array.prototype 
- * {
- *  .... 
- *  joinOriginal: function () {},
- *  join: function () { our fun },
- *  ....
- * }
- */
