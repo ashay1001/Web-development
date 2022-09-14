@@ -14,6 +14,12 @@ let p2 = new Person('Jane Doe', 15)
 
 console.log(typeof Person) // this is "function" & there is NO new datatype called 'class'
 
+console.log(Person)
+console.log(p1)
+
+console.log("Person.prototype: ", Person.prototype)
+console.log("p1.__proto__: ", p1.__proto__)
+
 console.log(p1.__proto__ == Person.prototype) // true
 
 console.log(p1.__proto__.__proto__ == Object.prototype) // true 
