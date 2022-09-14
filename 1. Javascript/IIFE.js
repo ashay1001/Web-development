@@ -26,10 +26,10 @@ console.log("Tan(22/7)",Math.tan(22/7))
 
 (function (p, q, r, s){
 
-p("2^3", q(2,3))
+p("2^3 = ", q(2,3))
 
-p("sqrt(4)", r(4))
+p("sqrt(4) = ", r(4))
 
-p("Tan(22/7)", s(22/7))
+p("Tan(22/7) = ", s(22/7))
 
 })(console.log, Math.pow, Math.sqrt, Math.tan)
