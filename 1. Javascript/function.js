@@ -23,11 +23,12 @@ function a()
 Variables defined with let and const are hoisted to the top of the block, but not initialized.
 Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
 Using a let variable before it is declared will result in a ReferenceError.
+*/
 
-name = "Mario"    --> Uncaught ReferenceError: Cannot access 'name' before initialization
+/*
+name = "Mario"    //--> Uncaught ReferenceError: Cannot access 'name' before initialization
 console.log("Accessing let name: ", name)
 let name;
-
 */
 
 //console.log(square())  --> Uncaught ReferenceError: Cannot access 'square' before initialization (var square = function() --> this will also give reference error)
