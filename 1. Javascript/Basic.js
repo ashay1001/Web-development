@@ -65,6 +65,7 @@ var bird = {
 }
 
 console.log("bird.x =", bird.x)
+console.log("Calling 'bird.fly()'")
 bird.fly()
 
 //######## another way of creating an object #########
