@@ -10,6 +10,10 @@
     HTTP is stateless protocol 
 */
 
+
+//Function to make AJAX request
+
+/*
 function fetchRandomDog(){
     var xhrRequest = new XMLHttpRequest();
 
@@ -27,6 +31,31 @@ function fetchRandomDog(){
 
     xhrRequest.open('get', 'https://dog.ceo/api/breeds/image/random');
     xhrRequest.send();
+}
+*/
+
+//Another method of making ajax request using jquery
+/*
+function fetchRandomDog(){
+    
+    $.ajax({
+        url: 'https://dog.ceo/api/breeds/image/random',
+        method: 'GET',
+        success: function(data){
+            var imageURL = data.message;
+            $('#dog-image').attr('src', imageURL);
+        }
+    });
+}
+*/
+
+
+//more simpler way of making ajax request using jquery
+
+function fetchRandomDog(){
+    $.get('https://dog.ceo/api/breeds/image/random', function(data){
+            $('#dog-image').attr('src', data.message);
+    });
 }
 
 $('#fetch-dog-image-button').click(fetchRandomDog);
